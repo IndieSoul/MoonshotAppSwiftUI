@@ -13,9 +13,7 @@ struct MainViewForeachListOfMissionsView: View {
     
     var body: some View {
         ForEach(missions) { mission in
-            NavigationLink {
-                MissionView(mission: mission, astronauts: astronauts)
-            } label: {
+            NavigationLink(value: mission) {
                 MainViewMissionCard(mission: mission)
             }
         }

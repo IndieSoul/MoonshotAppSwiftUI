@@ -43,6 +43,9 @@ struct MainView: View {
                 }
                 .foregroundColor(.white)
             })
+            .navigationDestination(for: Mission.self) { mission in
+                MissionView(mission: mission, astronauts: astronauts)
+            }
         }
     }
 }
